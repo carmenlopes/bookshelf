@@ -1,0 +1,280 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+label {
+  display: block;
+  margin: 0;
+  color: var(--color-text);
+  line-height: 1em;
+}
+
+label.label-disabled {
+  opacity: .5;
+}
+
+body {
+  font-size: 16px;
+  background-color: var(--color-body);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4,
+h5, h6, a, p {
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  line-height: 1em;
+}
+
+h1, h2, h3, h4,
+h5, h6 {
+  font-weight: 700;
+}
+
+p a {
+  color: var(--color-primary-dark);
+  font-weight: 600;
+}
+
+p a:focus, li a:focus {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+}
+
+/*------------------------------------------------------------------
+    1. BUTTON
+-----------------------*/
+.button {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 48px;
+  border-radius: 10px;
+  background-color: #3e3f5e;
+  color: #fff;
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 48px;
+  cursor: pointer;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+  box-shadow: 3px 5px 10px 0 rgba(62, 63, 94, 0.2);
+}
+
+
+.content-grid {
+  max-width: 1184px;
+  padding: 55px 0 100px;
+  margin: 0 auto;
+}
+
+/*-----------------------------
+    11. USER STATS
+-----------------------------*/
+.user-stats {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.user-stats .user-stat {
+  width: 100%;
+  position: relative;
+}
+
+/*-----------------------------
+    12. USER STAT
+-----------------------------*/
+.user-stat.big {
+  margin: 0 auto 20px;
+}
+
+.user-stat.big .user-stat-title {
+  font-size: 1.375rem;
+}
+
+.user-stat.big .user-stat-text {
+  font-size: 0.75rem;
+}
+
+.user-stat .user-stat-title,
+.user-stat .user-stat-text {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.user-stat .user-stat-title {
+  font-size: 0.875rem;
+}
+
+.user-stat .user-stat-text {
+  margin-top: 10px;
+  color: var(--color-text-alt-2);
+  font-size: 0.6875rem;
+}
+
+.user-stat {
+  margin-top: 10px;
+}
+
+/*--------------------------------
+    18. USER SHORT DESCRIPTION
+--------------------------------*/
+.user-short-description {
+  padding-top: 84px;
+  position: relative;
+}
+
+.user-short-description.big .user-short-description-title {
+  font-size: 1.5rem;
+}
+
+.user-short-description.big .user-short-description-text {
+  font-size: 0.875rem;
+}
+
+.user-short-description.landscape .user-short-description-title,
+.user-short-description.landscape .user-short-description-text {
+  text-align: left;
+}
+
+.user-short-description .user-short-description-title,
+.user-short-description .user-short-description-text {
+  font-weight: 700;
+  text-align: center;
+}
+
+.user-short-description .user-short-description-title {
+  font-size: 1.125rem;
+}
+
+.user-short-description .user-short-description-title a {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.user-short-description {
+  margin-top: 4px;
+}
+
+.user-short-description .user-short-description-text {
+  margin-top: 6px;
+  color: var(--color-text);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.user-short-description .user-short-description-text a {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.user-short-description .user-short-description-text a:hover {
+  color: var(--color-primary-dark);
+}
+
+
+/*--------------------------
+    1. PROFILE HEADER
+--------------------------*/
+.profile-header {
+  border-radius: 12px;
+  background-color: var(--color-box-background);
+  box-shadow: var(--color-box-shadow);
+}
+
+.profile-header-cover{
+  background: url("../img/nigth.jpg")
+          center center / cover no-repeat;
+}
+.profile-header .profile-header-cover {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 300px;
+}
+
+.profile-header .profile-header-info {
+  padding-bottom: 32px;
+  position: relative;
+}
+
+.profile-header .profile-header-info .user-stats {
+  position: absolute;
+  top: 54px;
+  left: 40px;
+}
+
+.profile-header .profile-header-info .user-stats .user-stat {
+  padding: 0 30px;
+}
+
+/*--------------------
+    MEDIA QUERIES 
+--------------------*/
+@media screen and (max-width: 1365px) {
+  .profile-header .profile-header-cover {
+    height: 200px;
+  }
+  .profile-header .profile-header-info {
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .profile-header .profile-header-cover {
+    height: 76px;
+  }
+  .profile-header .profile-header-info .user-short-description {
+    padding-top: 84px;
+  }
+  .profile-header .profile-header-info .user-short-description .user-short-description-title {
+    font-size: 1.125rem;
+  }
+  .profile-header .profile-header-info .user-short-description .user-short-description-text {
+    font-size: 0.6875rem;
+  }
+  .profile-header .profile-header-info .user-stats .user-stat:last-child {
+    display: none;
+  }
+  .profile-header .profile-header-info .user-stats .user-stat .user-stat-title {
+    font-size: 0.875rem;
+  }
+  .profile-header .profile-header-info .user-stats .user-stat .user-stat-text {
+    font-size: 0.6875rem;
+  }
+}
